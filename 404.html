@@ -2,18 +2,43 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Redirect</title>
+    <title>Soft redirect</title>
     <style>
       body {
         background-color: black;
         color: white;
       }
+      button {
+        padding: 10px;
+        outline: none;
+        cursor: pointer;
+        background-color: green;
+        color: white;
+        border: 2px outset gray;
+      }
+      button:active {
+        border: 2px inset gray;
+      }
     </style>
   </head>
   <body>
-    <p>Redirecting... (the redirect is only TEMPORARY)</p>
+    <h1>npxl32 website</h1>
+    <p>Unfortunately, this website is not a GitHub Pages website, as GitHub Pages is for static websites.</p>
+    <p>The real website is located at https://www.npxl32.com/.</p>
+    <p>Would you like to go there? (Remember: it's www.npxl32.com, <i>not</i> npxl32.com)</p>
+    <button id="yes">Yes</button>
     <script>
-      setTimeout(()=>{location.replace("https://npxl32-temporary.azurewebsites.net/"), 1000};)
+    //  setTimeout(()=>{window.top.location.replace("https://www.npxl32.com/"), 1000});
+      document.querySelector("#yes").onclick = function() {
+        window.top.postMessage("so uhmm redirect you dumbass");
+      }
+      function onMessage(msg) {
+        if (msg.data == "so uhmm redirect you dumbass") {
+          alert("And remember: using npxl32.com without the www won't work.");
+          location.replace("https://www.npxl32.com/");
+        }
+      }
+      window.addEventListener("message", onMessage);
     </script>
   </body>
 </html>

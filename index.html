@@ -4,16 +4,37 @@
     <meta charset="UTF-8" />
     <title>Redirect</title>
     <style>
+      html {
+        height: 100%;
+        padding: 0px;
+      }
       body {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
         background-color: black;
         color: white;
+        padding: 0px;
+      }
+      #frame {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        border: none;
       }
     </style>
   </head>
   <body>
-    <p>Redirecting... (the redirect is only TEMPORARY)</p>
+    <iframe id="frame" src="404.html"></iframe>
     <script>
-      setTimeout(()=>{location.replace("https://npxl32-temporary.azurewebsites.net/"), 1000});
+     // setTimeout(function() {location.replace("/e");}, 100);
+      function onMessage(msg) {
+        if (msg.data == "so uhmm redirect you dumbass") {
+          alert("And remember: using npxl32.com without the www won't work.");
+          location.replace("https://www.npxl32.com/");
+        }
+      }
+      window.addEventListener("message", onMessage);
     </script>
   </body>
 </html>
