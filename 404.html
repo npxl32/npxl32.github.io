@@ -27,6 +27,60 @@
     <p>The real website is located at https://www.npxl32.com/.</p>
     <p>Would you like to go there? (Remember: it's www.npxl32.com, <i>not</i> npxl32.com)</p>
     <button id="yes">Yes</button>
+    <button id="maybe">Maybe</button>
+    <button id="no">No</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+    
+    <button id="none">None of the above</button>
     <script>
     //  setTimeout(()=>{window.top.location.replace("https://www.npxl32.com/"), 1000});
       document.querySelector("#yes").onclick = function() {
@@ -36,6 +90,28 @@
         if (msg.data == "so uhmm redirect you dumbass") {
           alert("And remember: using npxl32.com without the www won't work.");
           location.replace("https://www.npxl32.com/");
+        }
+      }
+      document.querySelector("#no").onclick = function() {
+        window.top.postMessage("so uhmm redirect you dumbass");
+      }
+      function onMessage(msg) {
+        if (msg.data == "so uhmm redirect you dumbass") {
+          alert("dude why");
+          location.replace("https://www.bing.com/images/search?view=detailV2&ccid=kTsj9swB&id=01D61C6224F5B1F7B5A7047AFF24E98EAA459C1B&thid=OIP.kTsj9swBUfydQG4k4vC9NQAAAA&mediaurl=https%3a%2f%2fi.kym-cdn.com%2fphotos%2fimages%2foriginal%2f002%2f575%2f103%2fa2b.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.913b23f6cc0151fc9d406e24e2f0bd35%3frik%3dG5xFqo7pJP96BA%26pid%3dImgRaw%26r%3d0&exph=348&expw=474&q=Krill+yourself&simid=608033358182823917&FORM=IRPRST&ck=E6B12A8FEA9C57088B7DA09FFA1D7161&selectedIndex=2&itb=0&ajaxhist=0&ajaxserp=0");
+        }
+      }
+      function onMessage(msg) {
+        if (msg.data == "so uhmm redirect you dumbass") {
+          alert("Be more decisive nerd.");
+          location.replace("https://ia801907.us.archive.org/6/items/animusic-2001-60fps/Beyond%20the%20Walls%20%281996%29.mp4");
+        }
+      }
+      }
+      function onMessage(msg) {
+        if (msg.data == "so uhmm redirect you dumbass") {
+          alert(">:(");
+          location.replace("https://www.apple.com/safari/");
         }
       }
       window.addEventListener("message", onMessage);
